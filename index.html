@@ -9,139 +9,140 @@
   <link rel="icon" href="assets/img/matchalix-logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <a class="skip" href="#menu">Skip to the menu</a>
 
-  <header class="hero">
-    <nav class="nav" aria-label="Main">
-      <a class="nav-logo" href="#top" aria-label="Matcha Lix home">
-        <img src="assets/img/matchalix-logo.png" alt="Matcha Lix" width="500" height="500">
-      </a>
-      <ul class="nav-links">
-        <li><a href="#menu">Menu</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#find-us">Find us</a></li>
-      </ul>
-      <!-- TODO: replace with the real ordering link (WhatsApp, Instagram DM, etc.) -->
-      <a class="btn btn-pink nav-cta" href="#find-us">Order a drink</a>
-    </nav>
+  <!-- Round sticker navigation, fixed over the page -->
+  <nav class="nav" aria-label="Main">
+    <a class="nav-logo" href="#top" aria-label="Matcha Lix home">
+      <img src="assets/img/matchalix-logo.png" alt="Matcha Lix" width="500" height="500">
+    </a>
+    <ul class="badges">
+      <li>
+        <a class="badge badge-pink" href="#menu" aria-label="Menu">
+          <svg viewBox="0 0 100 100" aria-hidden="true">
+            <path id="arc-menu" d="M14 50 A36 36 0 0 0 86 50" fill="none"/>
+            <path d="M35 22h30l-4 36H39z" fill="currentColor"/>
+            <path d="M31 22h38" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+            <path d="M54 20l5-12" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+            <text><textPath href="#arc-menu" startOffset="50%" text-anchor="middle">menu</textPath></text>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a class="badge badge-green" href="#about" aria-label="About">
+          <svg viewBox="0 0 100 100" aria-hidden="true">
+            <path id="arc-about" d="M14 50 A36 36 0 0 0 86 50" fill="none"/>
+            <path d="M32 38l3-20 12 9h6l12-9 3 20a18 16 0 0 1-36 0z" fill="currentColor"/>
+            <circle class="badge-eye" cx="43" cy="40" r="2.6"/><circle class="badge-eye" cx="57" cy="40" r="2.6"/>
+            <text><textPath href="#arc-about" startOffset="50%" text-anchor="middle">about</textPath></text>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a class="badge badge-cream" href="#find-us" aria-label="Find us">
+          <svg viewBox="0 0 100 100" aria-hidden="true">
+            <path id="arc-find" d="M14 50 A36 36 0 0 0 86 50" fill="none"/>
+            <path d="M50 14a15 15 0 0 1 15 15c0 11-15 29-15 29S35 40 35 29a15 15 0 0 1 15-15z" fill="currentColor"/>
+            <circle class="badge-eye" cx="50" cy="29" r="5.5"/>
+            <text><textPath href="#arc-find" startOffset="50%" text-anchor="middle">find us</textPath></text>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </nav>
 
-    <div class="hero-inner" id="top">
-      <div class="hero-copy">
-        <h1 class="bubble">Come find your new favourite.</h1>
-        <p class="hero-lede">Matcha, coffee and chocolate drinks, layered up and poured over ice. Made cute, served cold.</p>
-        <div class="hero-actions">
-          <a class="btn btn-pink" href="#menu">See the line up</a>
-          <a class="btn btn-ghost" href="#find-us">Find the green tent</a>
-        </div>
-      </div>
+  <header class="hero" id="top">
+    <div class="hero-copy">
+      <h1>Come find your new favourite.</h1>
+      <p class="hero-lede">Matcha, coffee and chocolate drinks, layered up and poured over ice.</p>
+      <a class="pill" href="#menu">See the line up</a>
+    </div>
 
-      <div class="hero-cat" aria-hidden="true">
-        <svg class="cat" viewBox="0 0 400 560" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <clipPath id="glass-clip"><rect x="138" y="46" width="124" height="166" rx="12"/></clipPath>
-          </defs>
-          <!-- glass -->
-          <rect x="132" y="34" width="136" height="184" rx="18" fill="#d9efc9" stroke="#0f3323" stroke-width="6"/>
-          <g clip-path="url(#glass-clip)">
-            <rect class="pour" x="138" y="78" width="124" height="134" fill="#17472d"/>
-            <rect class="pour pour-foam" x="138" y="70" width="124" height="14" fill="#7fb069"/>
-          </g>
-          <rect x="150" y="52" width="10" height="70" rx="5" fill="#fff" opacity=".55"/>
-          <!-- arms -->
-          <path d="M132 380 Q84 270 142 168" fill="none" stroke="#0f3323" stroke-width="44" stroke-linecap="round"/>
-          <path d="M268 380 Q316 270 258 168" fill="none" stroke="#0f3323" stroke-width="44" stroke-linecap="round"/>
-          <path d="M132 380 Q84 270 142 168" fill="none" stroke="#f4f6d2" stroke-width="32" stroke-linecap="round"/>
-          <path d="M268 380 Q316 270 258 168" fill="none" stroke="#f4f6d2" stroke-width="32" stroke-linecap="round"/>
-          <!-- body + ears -->
-          <path d="M120 570 V330 Q120 268 140 258 L146 214 L186 248 H214 L254 214 L260 258 Q280 268 280 330 V570 Z" fill="#f4f6d2" stroke="#0f3323" stroke-width="6" stroke-linejoin="round"/>
-          <circle cx="172" cy="306" r="8" fill="#0f3323"/>
-          <circle cx="228" cy="306" r="8" fill="#0f3323"/>
-          <path d="M194 322 Q200 328 206 322" fill="none" stroke="#0f3323" stroke-width="4" stroke-linecap="round"/>
-          <ellipse cx="152" cy="328" rx="12" ry="7" fill="#ffb3dc"/>
-          <ellipse cx="248" cy="328" rx="12" ry="7" fill="#ffb3dc"/>
-        </svg>
-      </div>
+    <div class="hero-drinks" aria-hidden="true">
+      <img class="hero-cat" src="assets/img/cat.png" alt="" width="578" height="900">
+      <img class="hero-cup cup-a" src="assets/img/drinks%201.png" alt="" width="440" height="699">
+      <img class="hero-cup cup-c" src="assets/img/drinks%207.png" alt="" width="440" height="699">
+      <img class="hero-cup cup-b" src="assets/img/drinks%203.png" alt="" width="440" height="699">
     </div>
   </header>
 
-  <div class="ticker" aria-hidden="true">
-    <div class="ticker-track">
-      <span>Matcha</span><i></i><span>Coffee</span><i></i><span>Chocolate</span><i></i><span>Matcha</span><i></i><span>Coffee</span><i></i><span>Chocolate</span><i></i>
-      <span>Matcha</span><i></i><span>Coffee</span><i></i><span>Chocolate</span><i></i><span>Matcha</span><i></i><span>Coffee</span><i></i><span>Chocolate</span><i></i>
-    </div>
-  </div>
-
   <main>
     <section class="menu" id="menu" aria-labelledby="menu-title">
-      <div class="wrap menu-grid">
-        <div class="menu-main">
-          <h2 class="bubble bubble-on-cream" id="menu-title">The new line up</h2>
-          <p class="section-lede">Eight drinks, three moods. Pick the one you're in.</p>
-
-          <div class="tabs" role="tablist" aria-label="Drink type">
-            <button class="tab" role="tab" id="tab-matcha" aria-controls="panel-matcha" aria-selected="true" data-flavour="matcha">Matcha</button>
-            <button class="tab" role="tab" id="tab-coffee" aria-controls="panel-coffee" aria-selected="false" tabindex="-1" data-flavour="coffee">Coffee</button>
-            <button class="tab" role="tab" id="tab-chocolate" aria-controls="panel-chocolate" aria-selected="false" tabindex="-1" data-flavour="chocolate">Chocolate</button>
-          </div>
-
-          <!-- TODO: drink names and descriptions are placeholders based on the poster. Swap in the real menu and prices. -->
-          <div class="panel" role="tabpanel" id="panel-matcha" aria-labelledby="tab-matcha" data-flavour="matcha" tabindex="0">
-            <ul class="drinks">
-              <li><h3>Matcha latte</h3><p>The classic. Whisked matcha over cold milk.</p></li>
-              <li><h3>Caramel matcha</h3><p>Matcha latte with a caramel swirl on top.</p></li>
-              <li><h3>Blueberry matcha</h3><p>Blueberry at the bottom, matcha on top, berries to finish.</p></li>
-              <li><h3>Banana matcha</h3><p>Matcha under banana cream, with banana slices.</p></li>
-            </ul>
-          </div>
-          <div class="panel" role="tabpanel" id="panel-coffee" aria-labelledby="tab-coffee" data-flavour="coffee" tabindex="0" hidden>
-            <ul class="drinks">
-              <li><h3>Strawberry cloud coffee</h3><p>Iced coffee under a thick strawberry foam.</p></li>
-              <li><h3>Caramel cream coffee</h3><p>Iced coffee, cream top, caramel drizzle.</p></li>
-            </ul>
-          </div>
-          <div class="panel" role="tabpanel" id="panel-chocolate" aria-labelledby="tab-chocolate" data-flavour="chocolate" tabindex="0" hidden>
-            <ul class="drinks">
-              <li><h3>Iced chocolate</h3><p>Deep, cold and properly chocolatey.</p></li>
-              <li><h3>Strawberry chocolate</h3><p>Iced chocolate with a strawberry foam hat.</p></li>
-            </ul>
-          </div>
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>matcha</span><span class="fill">coffee</span><span>chocolate</span><span class="fill">matcha</span><span>coffee</span><span class="fill">chocolate</span>
+          <span>matcha</span><span class="fill">coffee</span><span>chocolate</span><span class="fill">matcha</span><span>coffee</span><span class="fill">chocolate</span>
         </div>
+      </div>
 
-        <figure class="sticker-photo poster">
-          <img src="assets/img/matchalix_new_lineup_poster.png" alt="Eight Matcha Lix drinks on steps: four layered matcha drinks in the back row, and coffee and chocolate drinks with pink and caramel toppings in front." width="521" height="707" loading="lazy">
-        </figure>
+      <div class="wrap">
+        <h2 id="menu-title">The new line up</h2>
+        <p class="menu-lede">Eight drinks, three moods. Point at the one that looks good.</p>
+
+        <!-- [NEEDS CLIENT: real drink names and prices. These names only describe what is in each photo.] -->
+        <ul class="drinks">
+          <li class="drink"><div class="disc disc-green"><img src="assets/img/drinks%201.png" alt="" width="440" height="699" loading="lazy"></div><h3>Matcha latte</h3><p>Matcha</p></li>
+          <li class="drink"><div class="disc disc-cream"><img src="assets/img/drinks%202.png" alt="" width="440" height="699" loading="lazy"></div><h3>Caramel matcha latte</h3><p>Matcha</p></li>
+          <li class="drink"><div class="disc disc-hot"><img src="assets/img/drinks%203.png" alt="" width="440" height="699" loading="lazy"></div><h3>Blueberry matcha</h3><p>Matcha</p></li>
+          <li class="drink"><div class="disc disc-green"><img src="assets/img/drinks%204.png" alt="" width="440" height="699" loading="lazy"></div><h3>Banana matcha</h3><p>Matcha</p></li>
+          <li class="drink"><div class="disc disc-cream"><img src="assets/img/drinks%205.png" alt="" width="440" height="699" loading="lazy"></div><h3>Strawberry coffee</h3><p>Coffee</p></li>
+          <li class="drink"><div class="disc disc-hot"><img src="assets/img/drinks%206.png" alt="" width="440" height="699" loading="lazy"></div><h3>Caramel coffee</h3><p>Coffee</p></li>
+          <li class="drink"><div class="disc disc-green"><img src="assets/img/drinks%207.png" alt="" width="440" height="699" loading="lazy"></div><h3>Strawberry chocolate</h3><p>Chocolate</p></li>
+          <li class="drink"><div class="disc disc-cream"><img src="assets/img/drinks%208.png" alt="" width="440" height="699" loading="lazy"></div><h3>Iced chocolate</h3><p>Chocolate</p></li>
+        </ul>
       </div>
     </section>
 
     <section class="about" id="about" aria-labelledby="about-title">
+      <svg class="waves" viewBox="0 0 1000 1000" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 0h260c90 120-60 220 40 360s260 60 300 220-120 240-20 420H0z"/>
+        <path d="M1000 120c-140 40-220 160-160 300s180 120 160 300z"/>
+      </svg>
+      <h2 class="giant" id="about-title">About</h2>
       <div class="wrap about-grid">
-        <img class="about-logo" src="assets/img/matchalix-logo.png" alt="" width="500" height="500" loading="lazy">
-        <div>
-          <h2 class="bubble" id="about-title">Drinks that look as good as they taste</h2>
-          <p>Matcha Lix is a small drinks brand with a big sweet tooth. We mix matcha, coffee and chocolate into combos you don't see every day, then layer them so you can see exactly what you're about to sip.</p>
-          <p>No menu you need a dictionary for. Just point at the one that looks good. Our cat already has.</p>
+        <div class="about-copy">
+          <div>
+            <h3>Flavours you don't see every day</h3>
+            <p>Matcha Lix mixes matcha, coffee and chocolate with fruit, caramel and cream. Blueberry under matcha. Strawberry foam on chocolate. Banana where you didn't expect it.</p>
+          </div>
+          <div>
+            <h3>Layered so you can see it</h3>
+            <p>Every drink is poured in layers over ice, so you know exactly what you're about to sip. They look as good as they taste, and yes, you can take a photo first.</p>
+          </div>
+          <div>
+            <h3>Easy to order</h3>
+            <p>No menu you need a dictionary for. Just point at the cute one. Our cat already has.</p>
+          </div>
         </div>
+        <figure class="about-photo">
+          <img src="assets/img/matchalix_new_lineup_poster.png" alt="Eight Matcha Lix drinks arranged on steps: four layered matcha drinks at the back, coffee and chocolate drinks with pink and caramel toppings in front." width="521" height="707" loading="lazy">
+        </figure>
       </div>
     </section>
 
     <section class="find" id="find-us" aria-labelledby="find-title">
-      <div class="wrap find-grid">
-        <figure class="sticker-photo stall">
-          <img src="assets/img/matchalix_stall.png" alt="The Matcha Lix stall at night: a green tent, a green and pink Matcha Lix banner on the table, and menu boards on either side." width="446" height="593" loading="lazy">
-        </figure>
-        <div>
-          <h2 class="bubble bubble-on-cream" id="find-title">Look for the green tent</h2>
-          <p class="section-lede">We pop up at night markets. Spot the green tent and the pink letters and you've found us.</p>
-          <p>Where we are changes week to week, so we post each spot before we set up. Message us to ask what's on tonight or to order ahead.</p>
-          <!-- TODO: add real Instagram / WhatsApp links, and location + opening hours if they are fixed. -->
-          <div class="hero-actions">
-            <a class="btn btn-green" href="#">See this week's spot on Instagram</a>
-            <a class="btn btn-pink" href="#">Message us to order</a>
+      <p class="giant giant-green" aria-hidden="true">Find us</p>
+      <div class="wrap">
+        <div class="find-card">
+          <div class="find-copy">
+            <h2 id="find-title">Look for the green tent</h2>
+            <!-- [NEEDS CLIENT: where and when the stall trades. The copy below assumes a night-market stall that moves around.] -->
+            <p class="find-lede">Spot the green tent and the pink letters and you've found us.</p>
+            <p>Where we set up can change, so we post each spot before we open. Message us to ask where we are tonight or to order ahead.</p>
+            <div class="find-actions">
+              <!-- [NEEDS CLIENT: Instagram link] -->
+              <a class="pill pill-green" href="#">See our next spot on Instagram</a>
+              <!-- [NEEDS CLIENT: WhatsApp or other ordering link] -->
+              <a class="pill" href="#">Message us to order</a>
+            </div>
           </div>
+          <figure class="find-photo">
+            <img src="assets/img/matchalix_stall.png" alt="The Matcha Lix stall at night: a green tent, a green and pink Matcha Lix banner on the table, and menu boards on either side." width="446" height="593" loading="lazy">
+          </figure>
         </div>
       </div>
     </section>
@@ -149,7 +150,7 @@
 
   <footer class="footer">
     <div class="wrap footer-inner">
-      <p class="bubble footer-word">Matcha Lix</p>
+      <img class="footer-logo" src="assets/img/matchalix-logo.png" alt="Matcha Lix" width="500" height="500" loading="lazy">
       <ul class="footer-links">
         <li><a href="#menu">Menu</a></li>
         <li><a href="#about">About</a></li>
@@ -158,7 +159,5 @@
       <p class="footer-small">© 2026 Matcha Lix. Matcha, coffee and chocolate drinks.</p>
     </div>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
